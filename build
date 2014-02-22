@@ -1,0 +1,1 @@
+cc -g -o wobbly main.c image-loader.c wobbly.c $(pkg-config --cflags --libs x11 egl glesv2 libpng) -lm -lpthread -Wall

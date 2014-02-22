@@ -1,0 +1,23 @@
+Wobbly Standalone GLES2
+
+To build the source code, run the build script:
+
+./build
+
+The dependencies are:
+
+libpthread
+x11
+egl
+glesv2
+libpng
+
+After compilation, run it:
+
+./wobbly
+
+
+The current implementation does not support maximize,
+which is a significant portion of the original code base.
+A different texture may be used by specifying with -texture.
+Only png power-of-two images are supported.
