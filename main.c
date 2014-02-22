@@ -39,7 +39,7 @@ struct shared_context {
 
 static int last_x = 0, last_y = 0, redraw = 0, running = 1, render_mode = 0, pointer[2];
 static GLint u_matrix = -1;
-static GLint attr_pos = 0, attr_color = 1, attr_texture = 2;
+static GLint attr_pos = 0, attr_texture = 1;
 
 
 static void
@@ -315,7 +315,6 @@ create_shaders(void)
 {
    static const char *fragShaderText =
       "precision mediump float;\n"
-      "varying vec4 v_color;\n"
       "varying vec2 v_texcoord;\n"
       "uniform sampler2D tex;\n"
       "void main() {\n"
@@ -324,15 +323,12 @@ create_shaders(void)
    static const char *vertShaderText =
       "uniform mat4 modelviewProjection;\n"
       "attribute vec4 pos;\n"
-      "attribute vec4 color;\n"
-      "varying vec4 v_color;\n"
       "attribute vec2 texcoord;\n"
       "varying vec2 v_texcoord;\n"
       "void main() {\n"
       "   gl_Position = modelviewProjection * pos;\n"
       "   gl_PointSize = 4.0;\n"
       "   v_texcoord = texcoord;\n"
-      "   v_color = color;\n"
       "}\n";
 
    GLuint fragShader, vertShader, program;
@@ -373,7 +369,6 @@ create_shaders(void)
    glUseProgram(program);
    
    glBindAttribLocation(program, attr_pos, "pos");
-   glBindAttribLocation(program, attr_color, "color");
    glBindAttribLocation(program, attr_texture, "texcoord");
    glLinkProgram(program);
 
