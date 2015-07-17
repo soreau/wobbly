@@ -1,10 +1,6 @@
 Wobbly Standalone GLES2
 
-To build the source code, run the build script:
-
-./build
-
-The dependencies are:
+Install the dependencies:
 
 libpthread
 x11
@@ -12,9 +8,13 @@ egl
 glesv2
 libpng
 
-After compilation, run it:
+Build the source code:
 
-./wobbly
+$ make
+
+Run it:
+
+$ ./wobbly
 
 
 The current implementation does not support maximize,
