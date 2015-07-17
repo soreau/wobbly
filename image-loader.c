@@ -1,12 +1,5 @@
 #include "image-loader.h"
  
-int *textureImage;
-float rotateX = 0;
-float rotateY = 0;
- 
-int mouseX;
-int mouseY;
- 
 int loadPngImage(char *name, int *outWidth, int *outHeight, void **outData) {
     png_structp png_ptr;
     png_infop info_ptr;
