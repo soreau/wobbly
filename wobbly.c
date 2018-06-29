@@ -36,11 +36,6 @@
 
 #include "wobbly.h"
 
-#define WIN_X(w) ((w)->attrib.x - (w)->output.left)
-#define WIN_Y(w) ((w)->attrib.y - (w)->output.top)
-#define WIN_W(w) ((w)->width + (w)->output.left + (w)->output.right)
-#define WIN_H(w) ((w)->height + (w)->output.top + (w)->output.bottom)
-
 #define GRID_WIDTH  4
 #define GRID_HEIGHT 4
 
