@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-c -Wall
-LIBS=-lm -lGLESv2 -lpng12 -lpthread -lX11 -lEGL
+LIBS=-lm -lGLESv2 -lpng16 -lpthread -lX11 -lEGL
 EXE=wobbly
 
 all: wobbly
